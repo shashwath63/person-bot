@@ -1,0 +1,10 @@
+# Core dependencies for YouTube Personality Chatbot
+openai>=1.0.0
+youtube-transcript-api>=0.6.0
+python-dotenv>=1.0.0
+streamlit>=1.28.0
+
+# For separated backend/frontend architecture (optional)
+flask>=2.3.0
+flask-cors>=4.0.0
+requests>=2.31.0

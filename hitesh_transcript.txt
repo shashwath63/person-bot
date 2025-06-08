@@ -1,0 +1,410 @@
+Hey there everyone, here and welcome to
+the channel. In case you are new to the
+channel, hit that subscribe button
+because we talk about the tech a lot and
+not just tech in like tech news. We
+definitely cover the tech news but we
+also cover the tech concept, the full
+stack projects all about git, all about
+machine learning, a whole wide range of
+aspect we cover here on this channel. So
+let's start with this video. So I was
+about to introduce you with a new
+platform and just I was about to
+introduce you with this new really crazy
+and crazy good platform. I thought hey
+these are the three terms I have never
+discussed about about them and these are
+the three term which you should really
+know if you're building any kind of
+large scale application. What are these
+three terms? How did I found them out?
+Let me just go ahead and walk you
+through. So I was here on this website.
+I was about to introduce you the ingest
+which is AI and back-end workflows
+orchestrated at any scale. So I was
+talking about the scale just when I was
+preparing my notes to discuss about this
+platform in general. I scrolled down a
+little bit and I saw a really
+interesting aspect here. Ah this is
+interesting batching fan out and
+scheduling. And I realized I have never
+talked about them. So before I introduce
+you this platform which I will do in the
+next video. I think one thing that I
+should do now is first of all introduce
+you to this tech as in general. So I
+thought let's go ahead and talk about
+this. So in this video we're going to
+talk about the three mostnown tech
+concept and especially if you're
+building any application which is
+probably at large
+scale or if you're building anything
+that is related to AI. Now this AI could
+be any kind of inferencing that you are
+doing. Probably you are processing
+videos. Uh probably you are processing
+images or maybe performing anything
+else. Maybe interviews. Whatever you're
+doing this is a must to know uh kind of
+a tech jarens if you have never worked
+around them. So in this video we're
+going to just talk about three must know
+tech concept. We'll take one by one and
+rest assured after watching this video
+you will never have to worry about any
+example or any
+u wild guesses about what these decks
+are. You will know exactly what they are
+and how they are they need to be
+utilized. I will give you some of the
+real world examples so that you can
+compare them how it happens in the real
+world. I'll give you the tech examples.
+I will give you the exact pros why this
+specific method or specific technique is
+being utilized. Now these topics are
+pretty important and especially those
+people who are learning about system
+design and stuff they actually study
+them just as a theoretical topic but we
+actually use them in a regular
+day-to-day basis. So I thought let's go
+ahead and start with them. So first of
+all let's go ahead and start with my
+favorite one which is batching. So why
+would anybody would like to see uh
+what's going on with the batching and
+why even batching matters. So let's
+start with this one. The easiest part of
+it. All right. So batching. How can you
+understand the batching as in general
+process whenever anybody asks you in the
+batching just always remember this
+example. Let's just say there is a tea
+shop and this tea shop the whole job is
+to make some or prepare some tea for the
+clients that are coming in. But they
+don't do it like that. They first go
+ahead and take orders and once the order
+limit reaches to let's just say five
+orders of tea then only they go out and
+start preparing the tea. This is the
+most important aspect of it. They don't
+they don't perform the job immediately.
+They wait for certain number of orders
+to pile up and after that only they
+start processing. This is exactly your
+batching process. And this is exactly
+how it works in the real world example
+as well. Uh one more example uh just
+where we use it actually. So let's just
+say we have this application. I'll just
+remove this. Let's just say we have this
+application and this application
+actually collects a lot of events. So as
+you can see, let's go up and have the
+events. So this is the one event and
+then we also have one event, one event,
+one event. So a lot of events are
+happening. Let's just say these are 100
+events per minute or per 5 minute that
+are happening. What do you think? It
+would be a good idea to write 100 write
+operation in the databases every second
+or something like that. It would be
+ridiculous. You will be overwhelming
+your databases. So we don't do that. We
+collect a lot of information about all
+these events happen. But once we reach
+the limit of the threshold of the 100
+then only we go ahead and process them
+in the database. So process them in uh
+DB. This is the most common example that
+you're going to see that a lot of events
+are getting collected but once they
+reach the threshold then we write the
+database just once probably once every 5
+minute. Five would be too long of a
+stretch. uh we actually do it every 1
+minute but again every second you are
+collecting and overwhelming your
+database right per event would not be a
+great idea. So what happens when you do
+these kinds of batching when you process
+now first of all it's not meant for
+every single thing you definitely don't
+want to do this for certain kind of
+things where the information is too
+important but these analytical events
+they can be in the queue for a while and
+then you can process them once in a
+while. What happens? How does it
+actually helps? The first it improves
+the efficiency. Now processing item one
+by one is too heavy. It will increase
+the load. But if you're processing all
+the things in the collection, it will
+reduce the load significantly. Your
+database connections will be less uh of
+course as well as your API calls will be
+reduced and there you are just
+performing one single operation. So that
+is why it 100% improves the efficiency.
+But there is a time and there is a
+requirement of this batching. Don't
+apply this batching to every single uh
+CRUD operation or CRUD application that
+you are building. But yes, there are
+ways where it actually is required. The
+next one is latency versus throughput
+trade-off. Now the reason why I have
+called this as trade-off because yes uh
+first of all this latency part the
+latency that you're going to see is
+going to be falling quite a lot because
+the things are not happening
+immediately. things are taking time now.
+We are collecting the data and then we
+are throwing them off in the database or
+to the user. So latency is considerably
+low but the throughput is high. More
+item are getting processed in just one
+request. So it's a trade-off. What do
+you want in your application to happen?
+Are you okay with not processing the
+data immediately and processing them in
+the bulk after time? Because these days
+the CPUs, the GPUs, they are very
+powerful. So it is possible that you get
+a high throughput in that but again it's
+a trade-off latency goes down uh but our
+throughput actually increase so how much
+you are comfortable with that that will
+help you to determine how much quantity
+you want to process and what's the time
+you have to get it so this is something
+and again the last where it is used it
+is definitely used in the APIs it is
+definitely used in a database rights and
+it it is also used in ML inferencing as
+I mentioned I was about to teach you on
+this example but we are not talking
+about them we'll talk about them in the
+later on videos but let's just say
+models like GPTs and all of them they
+actually do a lot of inferencing uh
+payments like stripe they actually do a
+lot of these batch works and web hooks
+so that's why you don't see all the
+requests immediately sometimes they take
+a minute or probably few seconds so this
+is a common thing again batching is a
+very common concept but I didn't realize
+a lot of people are not aware of it
+another next
+So the next must to know concept is a
+fan out process. All right. So what is a
+fan out process? Let's talk about it.
+Now fan out or fanning out is an
+interesting concept. Let me walk you
+through with an example. So fan out is a
+simple way that you have one task. But
+if you're going to do that task, it's
+going to take longer time for you to to
+completely do that task. Instead you
+break the task into different smaller
+task and you hand over these smaller
+task to different people and those
+people are responsible for doing that
+task and we get certain advantage. Let's
+just say a task was break broken down
+into three of these steps. If one of the
+task fail the middle one the first task
+is complete or first subtask is complete
+the third subtask is complete only the
+second one fail. So we can attempt to do
+the second task again only the second
+one. And first of all you also get the
+parallel processing of the task as well.
+You are not busy at all. You have just
+handed over them. A great example would
+be let's just say you are hosting a tea
+party at your home and you want to serve
+the snacks. You want to serve the teas
+and somebody who is not drinking the tea
+maybe you are offering them some cold
+drinks or maybe coffee whatever they
+like. So instead of doing all of this
+task on your own you can actually hire
+three more people. One will be
+responsible for greeting the guest. One
+will be responsible for serving the tea.
+One will be responsible for serving the
+snacks. One will be responsible for
+serving the coffee. You have reduced
+your load. And that's exactly the
+fanning out. And in the world of AI,
+this is quite a lot. Let me give you an
+example. I think you will have you will
+understand this much much easier with
+this. Let's just say we have a certain
+task. Uh you are processing some video
+or something like that. You have built a
+platform. So the first task that we have
+is uh we want to generate a thumbnail.
+That's my first task. Then after the
+thumbnail, we go ahead and do
+transcription of the video. And apart
+from that, since this is on our
+platform, we also want to check whether
+this video is all okay or good or not.
+So I want to do virus scan as well. And
+these are my three task that I want to
+do. So instead of doing them in just one
+controller or one of the method, what
+I'll do is I'll fan it out. I'll
+allocate this to different services and
+I try to do that now because things are
+happening as in parallel processing what
+we are getting is thumbnail somebody's
+doing it a different process or
+different service is doing it a
+transcription is being done by somebody
+else and a virus scan is done by
+somebody else let's just say uh in our
+case or in our system this transcription
+failed so this part is gone it's not yet
+done so what impact does it make Nothing
+much. Surely the transcription hasn't
+been done but the thumbnail part it's
+done. The virus scan it's done. Only the
+transcription is not getting done. So I
+can just reattempt this many task and I
+can save a lot of processing. That's
+exactly what happens in the world of AI.
+So we can see the parallel processing we
+have great way of sub doing these things
+parallelly. Not everything needs to be
+done. Uh workload definitely gets
+reduced. uh overall times sometimes it's
+reduced but not all the time depends on
+what you are doing. The most important
+and the luxury why everybody loves to do
+it is failure isolation. So we are
+dividing the major task into subtask and
+if any failure happens that's failure
+happens in isolation. Not all of the
+things will fail. If this would be one
+big controller I had to regenerate my
+thumbnail. I have to retry the
+transcript and then perform the virus
+scan. But instead I can just do them all
+in one go. user will feel like one go
+but I can know I know this uh that only
+one task has failed now this is common
+in the event-driven architecture
+whenever you're doing something so what
+do you mean by event- driven
+architectures at this scale so a lot of
+time what we do is we actually spin up a
+lot of AWS uh
+lambdas along with the SNS uh and all
+these things like and again not just SNS
+you can actually go ahead and use uh
+things like ingest here that is where
+this ingest thing actually comes up
+really nicely and perform very well. So
+this fanning out uh inest actually does
+it so ridiculously good. I'll walk you
+through in the next video and that was
+the reason initially that I wanted to
+make this one. So I'll touch upon this
+one in the next video. Wait for that.
+Hit that subscribe. I will come back
+onto this in just a minute. So I hope
+the fanning out concept or the fan out
+concept is now clear. Now last but not
+the least, let's go ahead and talk about
+the scheduling.
+Now, understanding the scheduling is
+super easy. So, let's just say you wake
+up every day at 7:00 a.m. Let's just say
+there would be an app which
+automatically turns up your kettle to
+boil the water right at 6:45 a.m. That
+would be pretty cool. But that's your
+scheduling. When you put up an alarm in
+your phone that I want to wake up at 7
+a.m. in the morning, so just have some
+music being played at 7:00 a.m. That's
+scheduling. That's literally is
+scheduling. So you have seen scheduling
+a lot in the world where we see the
+scheduling quite a lot is when you have
+set up a meeting on the zoom or maybe on
+Google meet remember how Google meet
+actually reminds you 5 minutes before
+they send an email that's exactly the
+scheduling most of the time you'll be
+doing your scheduling via the chrome
+jobs but there are alternative services
+available here and definitely that's the
+next video coming up so let's talk about
+scheduling you know these are the task
+which are scheduled to do in the future
+and whenever that time happens there is
+a chrome job which constantly keeps on
+checking the things if there is time
+being in the past it just does that job
+so it's simply a time based execution as
+we can see the Google meet is really the
+same example for this and again there
+are lots of such examples uh probably
+and especially uh the payment gateway
+does it really nicely so they actually
+do once a failure happens they don't try
+it immediately they put up a scheduling
+task that after 30 seconds or 1 minute I
+will retry this payment automatically
+Let's just say if it goes through or
+not. Again, hundreds and thousands of
+example. It is used in delayed jobs,
+chron jobs, cues. Yes, these are really
+common one. You are going to see uh
+temporal lots of such examples are
+there. I don't want to bog you with too
+many more complex tech terms, but just
+get the ideas. Chron is your the f is
+your favorite thing to work on with
+this. Every beginner starts with the
+chron jobs and eventually you discover
+more sophisticated tools with that. So
+right now just stay with the chron.
+Majority of the time you just need that
+one. Last but uh not the least is it
+great for retries and workflows. As I
+mentioned the retries after a certain
+time let's just say the mail failed to
+trigger and your system was not able to
+fire email. Let's try it after 3 minutes
+or 3 hours whatever you wish to have. So
+these are the three topics that I wanted
+to cover. These are really interesting
+topic to work on with and I honestly
+thought that a lot of people will know
+about them. But then I realized a lot of
+beginners have started to watch my
+channel again. So I thought let's go
+ahead and cover them up. These are
+although the topics of mostly system
+design but it's not system design. It's
+something that you use every single day
+and you will be using them if you're
+working anywhere nearby closely to AI.
+You will be working with them. So that
+is it for this video. Let's catch up in
+the next one.
