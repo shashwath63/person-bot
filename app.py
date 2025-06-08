@@ -417,6 +417,5 @@ st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666; padding: 1rem;">
     Built with ❤️ using Streamlit and OpenAI GPT-4<br>
-    <small>Make sure to add your OpenAI API key in the .env file</small>
 </div>
 """, unsafe_allow_html=True)
