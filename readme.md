@@ -1,24 +1,24 @@
-# React Jobs Project 
+# YouTube Personality Chatbot
 
 This is the jobs listing project.
 <img src="public/screen.png" />
 
 ## Usage
 
-This project uses JSON-Server for a mock backend.
+This project uses Python, Streamlit, OpenAi 4.1 .
 
 ### Install Dependencies
 
 ```bash
-npm install
+pip install requirements.txt
 ```
 
-### Run JSON Server
+### Run Server
 
 The server will run on http://localhost:8000
 
 ```bash
-npm run server
+streamlit run app.py
 ```
 
 ### Run Vite Frontend
@@ -32,7 +32,7 @@ npm run dev
 ### Build for Production
 
 ```bash
-npm run build
+streamlit serve app.py
 ```
 
 ### Preview Production Build
