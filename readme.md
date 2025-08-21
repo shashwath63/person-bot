@@ -1,6 +1,5 @@
 # YouTube Personality Chatbot
 
-This is the jobs listing project.
 <img src="public/screen.png" />
 
 ## Usage
